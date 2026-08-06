@@ -1,0 +1,57 @@
+body {
+  margin: 2rem;
+  line-height: 1.5;
+  background: #fffdf5;
+}
+
+.contact {
+  margin: 0 0 1rem;
+}
+
+.contact a {
+  display: block;
+  width: fit-content;
+}
+
+.films,
+.albums {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.films img {
+  height: 170px;
+}
+
+.albums img {
+  height: 110px;
+}
+
+.songs {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 10px 0;
+}
+
+.songs div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.songs img {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  display: block;
+}
+
+.manul {
+  max-width: 340px;
+  width: 100%;
+  display: block;
+  margin: 0;
+}
