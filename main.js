@@ -22,7 +22,7 @@ copyEmail.addEventListener("click", async () => {
     copyEmail.textContent = copyEmail.dataset.email;
     return;
   }
-  setTimeout(() => (copyEmail.textContent = "email me"), 1500);
+  setTimeout(() => (copyEmail.textContent = "Email me"), 1500);
 });
 
 for (const el of document.querySelectorAll("[data-shuffle]")) {
