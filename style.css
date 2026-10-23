@@ -39,6 +39,10 @@ body {
   margin-bottom: 0.25rem;
 }
 
+summary {
+  cursor: pointer;
+}
+
 .dashlist {
   list-style: "-  ";
   padding-left: 1.25rem;
