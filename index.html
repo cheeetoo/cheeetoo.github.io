@@ -1,51 +1,74 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Finn Cairns</title>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌼</text></svg>">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<p><a href="#" id="i-toggle">I</a> sail and study math at Dartmouth. I am starting our safety group (🌼).</p>
+  <p>I (Finn Cairns) go to and sail at Dartmouth. I am starting our safety group DAISI (🌼).
+    <a href="https://calendar.app.google/R4cp4x8wp3eGQVZV8">Meet with me</a>,
+    <button class="contact-toggle" id="copy-email" data-email="fjamescairns@gmail.com">email me</button>, or
+    <button class="contact-toggle" id="more-toggle">something else</button><span id="more" hidden>find me on
+      <a href="https://letterboxd.com/cheeetoo/">letterboxd</a> or
+      <a href="https://www.linkedin.com/in/finncairns/">linkedin</a></span>.
+  </p>
 
-<div class="contact" id="contact" hidden>
-  <a href="mailto:fjamescairns@gmail.com">fjamescairns@gmail.com</a>
-  <a href="https://github.com/cheeetoo">github</a>
-  <a href="https://letterboxd.com/cheeetoo/">letterboxd</a>
-  <a href="https://www.linkedin.com/in/finncairns/">linkedin</a>
-</div>
+  <img class="manul" src="img/manul.jpg" alt="A manul yelling, with her kitten.">
 
-<img class="manul" src="img/manul.jpg" alt="A manul yelling, with her kitten">
+  <p class="section-intro">I worked at <a href="https://secondlookresearch.com">Second Look</a> @ XLab @ UChicago this
+    summer and wrote:</p>
 
-<p>I am working at <a href="https://secondlookresearch.com">Second Look</a> @ XLab @ UChicago this summer and wrote this: <a href="https://www.lesswrong.com/posts/Dvqmgfeu2KDF7uMkx/internal-state-control-is-a-general-property-of-llms">Internal State Control Is a General Property of LLMs</a>.</p>
+  <ul class="dashlist">
+    <li><a href="https://www.lesswrong.com/posts/GeKveaNdruATcj2Fj">Even GPT-2 passes most functional global workspace tests
+        </a>.</li>
+    <li><a
+        href="https://www.lesswrong.com/posts/Dvqmgfeu2KDF7uMkx/internal-state-control-is-a-general-property-of-llms">Internal
+        State Control Is a General Property of LLMs</a>.</li>
+  </ul>
 
-<p>Some things I love:</p>
+  <p class="section-intro">Some things I like:</p>
 
-<p>All the people around me.</p>
+  <ul class="dashlist">
+    <li>The golden hour.<sup><button class="note-toggle" aria-expanded="false" aria-controls="note-golden-hour"
+          aria-label="How to get a golden hour notification">1</button></sup>
+      <p class="note" id="note-golden-hour" hidden>I get a reminder of it that consistently makes me very happy and I think it might make you happy too!
 
-<p>The golden hour.</p>
+        If you have an iPhone you can get reminded by doing this:
+        1. Open the Shortcuts app → Automations and click "+"
+        2. Select "Time of Day" then Sunset then 1 hour/30 minutes before
+        3. Find "New Blank Automation" then "Show Notification" then e.g. "(Peak) Golden Hour!!"
+        4. Click Done</p>
+    </li>
+    <!--<li>All the people around me.</li>-->
+    <li>My <a href="https://www.artic.edu/artworks/20701/waterloo-bridge-sunlight-effect">new</a>
+      <a href="https://www.artic.edu/artworks/64818/stacks-of-wheat-end-of-summer">desktop</a>
+      <a href="https://www.artic.edu/artworks/81545/stacks-of-wheat-sunset-snow-effect">wallpapers</a>.
+    </li>
+    <li>(Cans of) Garbanzo beans.</li>
+    <li><a href="https://www.youtube.com/watch?v=PdWTxJYNjcM">Box of Rain</a>.</li>
+    <li>
+      <div class="films" data-shuffle>
+        <a data-fixed href="https://letterboxd.com/film/magnolia/"><img src="img/posters/magnolia.png"
+            alt="Magnolia"></a>
+        <!--<a data-fixed href="https://letterboxd.com/film/in-the-mood-for-love/"><img src="img/posters/in-the-mood-for-love.jpg" alt="In the Mood for Love"></a>-->
+      </div>
+      <div class="albums">
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_k4J57wlionM1fyWTqZFB2rvpFElot874U"><img
+            src="img/music/dicks-picks-18.jpg" alt="Dick's Picks Vol. 18 — Grateful Dead"></a>
+        <a href="https://www.youtube.com/playlist?list=OLAK5uy_mS2sPIJinRK2fIXN9Ce756lZFRX2KT21o"><img
+            src="img/music/late-registration.jpg" alt="Late Registration — Kanye West"></a>
+      </div>
+    </li>
+  </ul>
 
-<p>My <a href="https://www.artic.edu/artworks/20701/waterloo-bridge-sunlight-effect">new</a>
-  <a href="https://www.artic.edu/artworks/64818/stacks-of-wheat-end-of-summer">desktop</a>
-  <a href="https://www.artic.edu/artworks/81545/stacks-of-wheat-sunset-snow-effect">wallpapers</a>.
-</p>
-
-<div class="films" data-shuffle>
-  <a data-fixed href="https://letterboxd.com/film/magnolia/"><img src="img/posters/magnolia.png" alt="Magnolia"></a>
-  <a data-fixed href="https://letterboxd.com/film/chungking-express/"><img src="img/posters/chungking-express.jpg" alt="Chungking Express"></a>
-  <a href="https://letterboxd.com/film/boogie-nights/"><img src="img/posters/boogie-nights-lb.jpg" alt="Boogie Nights"></a>
-  <a href="https://letterboxd.com/film/in-the-mood-for-love/"><img src="img/posters/in-the-mood-for-love.jpg" alt="In the Mood for Love"></a>
-  <a href="https://letterboxd.com/film/kill-bill-the-whole-bloody-affair/"><img src="img/posters/kill-bill-wba.jpg" alt="Kill Bill: The Whole Bloody Affair"></a>
-</div>
-
-<div class="albums">
-  <a href="https://www.youtube.com/playlist?list=OLAK5uy_lTLgsVtg_PpTAsUc28RW2V5YyWlUnXB88"><img src="img/music/live-dead.jpg" alt="Live/Dead — Grateful Dead"></a>
-  <a href="https://www.youtube.com/playlist?list=OLAK5uy_mS2sPIJinRK2fIXN9Ce756lZFRX2KT21o"><img src="img/music/late-registration.jpg" alt="Late Registration — Kanye West"></a>
-  <a href="https://www.youtube.com/playlist?list=OLAK5uy_kZGGsSBwmZSn_K5NHHgvMC91rrmhWVa0A"><img src="img/music/american-beauty.jpg" alt="American Beauty — Grateful Dead"></a>
-</div>
-
-<script src="main.js"></script>
+  <script src="main.js"></script>
 </body>
+
 </html>

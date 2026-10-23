@@ -1,3 +1,30 @@
+const moreToggle = document.getElementById("more-toggle");
+const more = document.getElementById("more");
+moreToggle.addEventListener("click", () => {
+  moreToggle.replaceWith(more);
+  more.hidden = false;
+});
+
+for (const toggle of document.querySelectorAll(".note-toggle")) {
+  const note = document.getElementById(toggle.getAttribute("aria-controls"));
+  toggle.addEventListener("click", () => {
+    note.hidden = !note.hidden;
+    toggle.setAttribute("aria-expanded", String(!note.hidden));
+  });
+}
+
+const copyEmail = document.getElementById("copy-email");
+copyEmail.addEventListener("click", async () => {
+  try {
+    await navigator.clipboard.writeText(copyEmail.dataset.email);
+    copyEmail.textContent = "copied!";
+  } catch {
+    copyEmail.textContent = copyEmail.dataset.email;
+    return;
+  }
+  setTimeout(() => (copyEmail.textContent = "email me"), 1500);
+});
+
 for (const el of document.querySelectorAll("[data-shuffle]")) {
   const kids = Array.from(el.children);
   const movable = kids.filter((k) => !k.hasAttribute("data-fixed"));
@@ -10,9 +37,3 @@ for (const el of document.querySelectorAll("[data-shuffle]")) {
     el.appendChild(k);
   }
 }
-
-document.getElementById("i-toggle").addEventListener("click", (e) => {
-  e.preventDefault();
-  const c = document.getElementById("contact");
-  c.hidden = !c.hidden;
-});

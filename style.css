@@ -4,13 +4,18 @@ body {
   background: #fffdf5;
 }
 
-.contact {
-  margin: 0 0 1rem;
+.contact-toggle {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline dotted;
 }
 
-.contact a {
-  display: block;
-  width: fit-content;
+.contact-toggle:hover {
+  text-decoration: underline;
 }
 
 .films,
@@ -29,24 +34,43 @@ body {
   height: 110px;
 }
 
-.songs {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin: 10px 0;
+.section-intro {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
 }
 
-.songs div {
-  display: flex;
-  align-items: center;
-  gap: 6px;
+.dashlist {
+  list-style: "-  ";
+  padding-left: 1.25rem;
+  margin: 0;
 }
 
-.songs img {
-  width: 24px;
-  height: 24px;
-  object-fit: cover;
-  display: block;
+.dashlist li {
+  margin: 0.35rem 0;
+}
+
+.note-toggle {
+  font: inherit;
+  font-size: 0.75em;
+  font-weight: bold;
+  color: #0000ee;
+  background: none;
+  border: none;
+  padding: 0 0.1em;
+  cursor: pointer;
+  text-decoration: underline dotted;
+}
+
+.note-toggle:hover {
+  text-decoration: underline;
+}
+
+.note {
+  max-width: 36rem;
+  margin: 0.25rem 0;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  white-space: pre-line;
 }
 
 .manul {
