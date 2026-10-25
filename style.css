@@ -11,11 +11,14 @@ body {
   border: none;
   padding: 0;
   cursor: pointer;
-  text-decoration: underline dotted;
+  -webkit-appearance: none;
+  appearance: none;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
 }
 
 .contact-toggle:hover {
-  text-decoration: underline;
+  text-decoration-style: solid;
 }
 
 .films,
@@ -62,11 +65,14 @@ summary {
   border: none;
   padding: 0 0.1em;
   cursor: pointer;
-  text-decoration: underline dotted;
+  -webkit-appearance: none;
+  appearance: none;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
 }
 
 .note-toggle:hover {
-  text-decoration: underline;
+  text-decoration-style: solid;
 }
 
 .note {
