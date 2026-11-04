@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
   <title>Finn Cairns</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -31,19 +32,21 @@
         State Control Is a General Property of LLMs</a>.</li>
   </ul>
 
-  <details>
-  <summary class="section-intro">Some things I like:</summary>
+  <p class="section-intro">Some things I like:</p>
 
   <ul class="dashlist">
     <li>The golden hour.<sup><button class="note-toggle" aria-expanded="false" aria-controls="note-golden-hour"
           aria-label="How to get a golden hour notification">1</button></sup>
-      <p class="note" id="note-golden-hour" hidden>I get a reminder of it that consistently makes me very happy and I think it might make you happy too!
-
-        If you have an iPhone you can get reminded by doing this:
-        1. Open the Shortcuts app → Automations and click "+"
-        2. Select Time of Day → Sunset → 1 hour/30 minutes before
-        3. Find New Blank Automation → Show Notification → e.g. "(Peak) Golden Hour!!"
-        4. Click "Done"</p>
+      <div class="note" id="note-golden-hour" hidden>
+        <p>I get a reminder of it that consistently makes me very happy and I think it might make you happy too!</p>
+        <p>If you have an iPhone you can get reminded by doing this:</p>
+        <ol>
+          <li>Open the Shortcuts app → Automations and click "+"</li>
+          <li>Select Time of Day → Sunset → 1 hour/30 minutes before</li>
+          <li>Search "New Blank Automation" → Show Notification → e.g. "Golden Hour!!"</li>
+          <li>Click "Done"</li>
+        </ol>
+      </div>
     </li>
     <!--<li>All the people around me.</li>-->
     <li>My <a href="https://www.artic.edu/artworks/20701/waterloo-bridge-sunlight-effect">new</a>
@@ -52,25 +55,21 @@
     </li>
     <li>(Cans of) Garbanzo beans.</li>
     <li><a href="https://www.youtube.com/watch?v=PdWTxJYNjcM">Box of Rain</a>.<sup><button class="note-toggle"
-          aria-expanded="false" aria-controls="note-box-of-rain" aria-label="Another version of Box of Rain">2</button></sup>
+          aria-expanded="false" aria-controls="note-box-of-rain"
+          aria-label="Another version of Box of Rain">2</button></sup>
       <p class="note" id="note-box-of-rain" hidden>I like <a href="https://www.youtube.com/watch?v=OBFhHNlrM3o">this live one</a> too!</p>
     </li>
     <li>
-      <div class="films" data-shuffle>
-        <a data-fixed href="https://letterboxd.com/film/magnolia/"><img src="img/posters/magnolia.png"
-            alt="Magnolia"></a>
-        <!--<a data-fixed href="https://letterboxd.com/film/in-the-mood-for-love/"><img src="img/posters/in-the-mood-for-love.jpg" alt="In the Mood for Love"></a>-->
-      </div>
-    </li>
-    <li>
-      <div class="albums">
-        <a href="https://www.youtube.com/playlist?list=OLAK5uy_k4J57wlionM1fyWTqZFB2rvpFElot874U"><img
-            src="img/music/dicks-picks-18.jpg" alt="Dick's Picks Vol. 18 — Grateful Dead"></a>
-        <a href="https://www.youtube.com/playlist?list=OLAK5uy_mS2sPIJinRK2fIXN9Ce756lZFRX2KT21o"><img
-            src="img/music/late-registration.jpg" alt="Late Registration — Kanye West"></a>
+      <div class="films">
+        <a href="https://letterboxd.com/film/magnolia/"><img src="img/posters/magnolia.png" alt="Magnolia"></a>
       </div>
     </li>
   </ul>
+
+  <details id="reading" hidden>
+    <summary class="section-intro">Some things I've read:</summary>
+
+    <ul class="dashlist reading"></ul>
   </details>
 
   <script src="main.js"></script>

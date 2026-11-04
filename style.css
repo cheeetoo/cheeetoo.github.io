@@ -4,7 +4,8 @@ body {
   background: #fffdf5;
 }
 
-.contact-toggle {
+.contact-toggle,
+.note-toggle {
   font: inherit;
   color: inherit;
   background: none;
@@ -17,24 +18,17 @@ body {
   text-decoration-style: dotted;
 }
 
-.contact-toggle:hover {
+.contact-toggle:hover,
+.note-toggle:hover {
   text-decoration-style: solid;
 }
 
-.films,
-.albums {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+.films {
   margin: 10px 0;
 }
 
 .films img {
   height: 170px;
-}
-
-.albums img {
-  height: 110px;
 }
 
 .section-intro {
@@ -57,22 +51,10 @@ summary {
 }
 
 .note-toggle {
-  font: inherit;
   font-size: 0.75em;
   font-weight: bold;
   color: #0000ee;
-  background: none;
-  border: none;
   padding: 0 0.1em;
-  cursor: pointer;
-  -webkit-appearance: none;
-  appearance: none;
-  text-decoration-line: underline;
-  text-decoration-style: dotted;
-}
-
-.note-toggle:hover {
-  text-decoration-style: solid;
 }
 
 .note {
@@ -80,7 +62,23 @@ summary {
   margin: 0.25rem 0;
   font-size: 0.85rem;
   opacity: 0.8;
-  white-space: pre-line;
+}
+
+.note p {
+  margin: 0;
+}
+
+.note p + p {
+  margin-top: 0.75em;
+}
+
+.note ol {
+  margin: 0;
+  padding-left: 1.5em;
+}
+
+.dashlist .note li {
+  margin: 0;
 }
 
 .manul {
@@ -88,4 +86,12 @@ summary {
   width: 100%;
   display: block;
   margin: 0;
+}
+
+.reading time {
+  display: inline-block;
+  min-width: 3.6em;
+  font-size: 0.85em;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.55;
 }

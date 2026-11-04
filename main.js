@@ -25,15 +25,35 @@ copyEmail.addEventListener("click", async () => {
   setTimeout(() => (copyEmail.textContent = "Email me"), 1500);
 });
 
-for (const el of document.querySelectorAll("[data-shuffle]")) {
-  const kids = Array.from(el.children);
-  const movable = kids.filter((k) => !k.hasAttribute("data-fixed"));
-  for (let i = movable.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [movable[i], movable[j]] = [movable[j], movable[i]];
-  }
-  let m = 0;
-  for (const k of kids.map((k) => (k.hasAttribute("data-fixed") ? k : movable[m++]))) {
-    el.appendChild(k);
-  }
-}
+const reading = document.getElementById("reading");
+fetch("reading.txt")
+  .then((r) => (r.ok ? r.text() : ""))
+  .then((text) => {
+    const list = reading.querySelector("ul");
+    const thisYear = String(new Date().getFullYear());
+    const entries = text
+      .split("\n")
+      .map((line, i) => ({ line: line.trim(), i }))
+      .filter(({ line }) => line && !line.startsWith("#"))
+      .map(({ line, i }) => {
+        const starred = line.startsWith("*");
+        const [date, title, url] = line.replace(/^\*\s*/, "").split("|").map((s) => s.trim());
+        return { date, title, url, starred, i };
+      })
+      .sort((a, b) => b.date.localeCompare(a.date) || b.i - a.i);
+    for (const { date, title, url, starred } of entries) {
+      const [year, month, day] = date.split("-");
+      const time = document.createElement("time");
+      time.dateTime = date;
+      time.textContent = new Date(year, month - 1).toLocaleString("en", { month: "short" });
+      if (day) time.textContent += ` ${Number(day)}`;
+      if (year !== thisYear) time.textContent += ` ${year}`;
+      const name = document.createElement(url ? "a" : "span");
+      name.textContent = title;
+      if (url) name.href = url;
+      const li = document.createElement("li");
+      li.append(time, " ", name, starred ? " ★" : "");
+      list.append(li);
+    }
+    reading.hidden = !entries.length;
+  });
